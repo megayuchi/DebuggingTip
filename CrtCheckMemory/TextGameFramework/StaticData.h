@@ -1,0 +1,14 @@
+#pragma once
+
+// FIGHTER_TYPE_00
+extern WCHAR g_FighterType0[25];
+const DWORD IMG_WIDTH_FIGHTER_TYPE0 = 5;
+const DWORD IMG_HEIGHT_FIGHTER_TYPE0 = 5;
+
+extern WCHAR g_pEnemyType0[16];
+const DWORD IMG_WIDTH_ENEMY_TYPE0 = 4;
+const DWORD IMG_HEIGHT_ENEMY_TYPE0 = 4;
+
+extern WCHAR g_pDetroyed[25];
+const DWORD IMG_WIDTH_DESTROYED = 5;
+const DWORD IMG_HEIGHT_DESTROYED = 5;

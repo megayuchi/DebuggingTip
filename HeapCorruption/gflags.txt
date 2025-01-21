@@ -1,0 +1,5 @@
+// tail checking + free checking + parameter validation
+gflags /i HeapCorruption_x64_debug.exe +htc +hfc +hpc
+
+// full page heap
+gflags /i HeapCorruption_x64_debug.exe +hpa

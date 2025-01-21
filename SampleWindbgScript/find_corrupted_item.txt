@@ -1,0 +1,58 @@
+.block
+{
+    $$ find CHARACTER::dwSpaceIndex != -1 
+    .echo The first argument is ${$arg1}.
+
+    $$ $t0 = CCharacterManager* pChrManager
+    r $t0 = $arg1 
+    dt CCharacterManager @$t0
+    
+    $$ index of CHARACTER's linked-list
+    r $t10 = 0
+
+    $$ LINK_ITEM* CCharacterManager::m_pCharacterLinkHead 
+    r $t1 = poi(@$t0 + 0x0)
+    .printf "LINK_ITEM* CCharacterManager::m_pCharacterLinkHead : %p \n", @$t1    
+
+    $$ DWORD dwIndex = 0;
+    $$ LINK_ITEM* pCur = m_pCharacterLinkHead
+    $$ while (pCur)
+    $$ {
+    $$     CHARACTER* pChr = (CHARACTER*)pCur->pItem;
+    $$     if (pChr->dwSpaceIndex != (DWORD)(-1))
+    $$     {
+    $$          printf(pChr, dwIndex);
+    $$          break;    
+    $$     }
+    $$     else
+    $$     {
+    $$          dwIndex++;    
+    $$     }
+    $$ }
+    
+    .while (@$t1 != 0)
+    {
+        $$ CHARACTER* pChr = (CHARACTER*)pCur->pItem
+        r $t2 = poi(@$t1 + 0x10)
+
+        $$ CHARACTER::dwSpaceIndex, pChr->dwSpaceIndex, use dwo() for 4 bytes value
+        r $t3 = dwo(@$t2 + 0x4C)
+        .if (@$t3 != 0xffffffff)
+        {
+            .printf "found corrupted item : %p, index:[%d], dwSpaceIndex:%x \n", @$t2, @$t10, @$t3
+            dt CHARACTER @$t2
+
+            $$ break
+            r $t1 = 0
+        }
+        .else
+        {
+            $$ count link
+            r $t10 = @$t10 + 1
+
+            $$ next node
+            r $t1 = poi(@$t1 + 0x8)
+            $$ .printf "Next Node : %p \n", @$t1
+        }
+    }
+}

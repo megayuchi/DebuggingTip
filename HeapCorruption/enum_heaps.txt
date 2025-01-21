@@ -1,0 +1,47 @@
+.block
+{
+    $$ enum hepas
+    !heap
+
+    .echo The first argument is ${$arg1}.
+
+    $$ @$t0 = first heap
+    $$ r @$t0 = 0000016eddd60000 
+    r @$t0 = $arg1 
+
+    $$ print first heap
+    .printf "First Heap : %p \n", @$t0
+
+    $$ user context(node)
+    r @$t1 = poi(@$t0 + 0x188)
+    .printf "User Contect : %p \n", @$t1
+
+    $$ heap count variable
+    r $t10 = 0
+
+    $$ while user context(t1) is not null
+    .while (@$t1 != 0)
+    {
+        $$ cur heap
+        r @$t2 = poi(@$t1 + 0x10)
+
+        .if (@$t2 == 0)
+        {
+            r @$t1 = 0
+        }
+        .else
+        {
+            .printf "[%d]Current Heap : %p \n", @$t10, @$t2
+
+            $$ next node
+            r @$t3 = poi(@$t1 + 0x0)
+            .printf "Next Node : %p \n", @$t3
+
+            $$ cur = cur_node->next
+            r @$t1 = @$t3
+        
+            $$ count heap
+            r $t10 = @$t10 + 1
+        }
+    }
+}

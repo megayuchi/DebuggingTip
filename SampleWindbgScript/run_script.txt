@@ -1,0 +1,4 @@
+$$>a<C:\DEV\DAIKON_ROOT\DebuggingTip\SampleWindbgScript\find_corrupted_item.txt 0x00000202e2747540
+.dwo() - 4 bytes
+.qwo() - 8 bytes
+.poi() - architecture dependent - pointer

@@ -1,0 +1,8 @@
+procdump -ma c:\dev\daikon_root\DebuggingTip\HeapCorruption\HeapCorruption_x64_debug.exe
+procdump -e -ma -w C:\DEV\DAIKON_ROOT\DebuggingTip\HeapCorruption\HeapCorruption_x64_debug.exe
+
+
+procdump -e -ma -w HeapCorruption_x64_release.exe
+
+jit디버거 설정
+C:\>procdump -ma -i c:\dumps

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="pch">
+      <UniqueIdentifier>{43ba8946-4e5d-4651-b9cc-a8239bcf352d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{237b0584-29c0-47f9-b214-96039c60fde8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObject">
+      <UniqueIdentifier>{84355daf-6ee2-4080-8335-ab547311d1cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Game Body">
+      <UniqueIdentifier>{b979e199-686b-4680-8499-def3bb220806}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\ProcessInput">
+      <UniqueIdentifier>{3fad2d3e-b0a0-499e-8ed8-a73e1056d0ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StaticData">
+      <UniqueIdentifier>{365eccaf-fad8-4cf4-b441-ba7673415ef2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="typedef">
+      <UniqueIdentifier>{2614608f-90e8-4171-af04-d258a7be9fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Game_typedef">
+      <UniqueIdentifier>{98346166-b52c-4866-8920-1a29f3c0dac1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>pch</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game\Game Body</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Game\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessInput.cpp">
+      <Filter>Game\ProcessInput</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticData.cpp">
+      <Filter>StaticData</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Game\Game Body</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Game\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessInput.h">
+      <Filter>Game\ProcessInput</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticData.h">
+      <Filter>StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="typedef.h">
+      <Filter>typedef</Filter>
+    </ClInclude>
+    <ClInclude Include="game_typedef.h">
+      <Filter>Game\Game_typedef</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
