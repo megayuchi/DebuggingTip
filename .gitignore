@@ -69,3 +69,8 @@ update_to_git.bat
 22_GameEngineFramework/App/.vs/App/v17/.suo
 22_GameEngineFramework/App/.vs/App/v17/Browse.VC.db
 /22_GameEngineFramework/RendererD3D12/x64
+*.idb
+*.res
+*.db
+*.json
+/DDrawGamePostEffect_MT_SIMD/Game/.vs
