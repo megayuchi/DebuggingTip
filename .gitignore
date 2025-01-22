@@ -74,3 +74,15 @@ update_to_git.bat
 *.db
 *.json
 /DDrawGamePostEffect_MT_SIMD/Game/.vs
+/CrtCheckMemory/TextGameFramework/.vs
+/CreateDump/.vs
+/ASAN/.vs
+/AppVerifier/.vs
+/CrtCheckMemory/TextGameFramework/x64
+/CrtHeapDiff/.vs
+/HeapCorruption/.vs
+/RemoteDebugging/SampleProject/.vs
+/HeapCorruption/x64
+/SampleWindbgScript/x64
+/SampleWindbgScript/.vs
+/RemoteDebugging/SampleProject/x64
